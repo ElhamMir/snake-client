@@ -12,8 +12,10 @@ const connect = function () {
     conn.setEncoding("utf8");
     conn.on("data",data =>{console.log(data)
     console.log("The connection is established")})
+
     console.log("I'm here")
     conn.on("data", name => conn.write("Name: [SNK]"))
+    //conn.write("Move: up")
 
     conn.on('connection', (client) => {
       console.log('New client connected!');
