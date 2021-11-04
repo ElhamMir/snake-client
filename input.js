@@ -1,14 +1,14 @@
 // Stores the active TCP connection object.
 let connection;
 
-const handleUserInput = function (conn,key) {
+const handleUserInput = function (key) {
     
     if(key === "b"){
         process.exit()
 
     }
     else if(key === "w"){
-        conn.write("Move: up")
+        conn.log("Move: up")
     }
     else if(key === "a"){
         console.log("Move: left")
@@ -18,6 +18,12 @@ const handleUserInput = function (conn,key) {
     }
     else if(key === "d"){
         console.log("Move: right")
+    }
+    else if(key === "l"){
+        conn.write("hiiiii")
+    }
+    else if(key === "c"){
+        conn.write("byeeee")
     }
     // your code here
   };
